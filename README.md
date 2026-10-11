@@ -1,6 +1,12 @@
 # MusicPlaylistManager
 A menu-driven Music Playlist Manager developed in C++ using a Doubly Linked List. Supports adding and deleting songs, forward/reverse traversal, current song selection, next/previous navigation, complete playlist playback, and Repeat All.
 
+<<<<<<< HEAD
+=======
+# MusicPlaylistManager
+A menu-driven Music Playlist Manager developed in C++ using a Doubly Linked List. Supports adding and deleting songs, forward/reverse traversal, current song selection, next/previous navigation, complete playlist playback, and Repeat All.
+
+>>>>>>> db18c92 (Update README and add test cases)
 # Music Playlist Manager Using Doubly Linked List in C++
 
 ## 1. Project Overview
@@ -262,7 +268,11 @@ Add the actual team information below:
 |   1 | Anshuman Sarve                |     242       |
 |   2 | Tejas Patil                   |     229       |
 |   3 | Gayatri Darade                |     016       |
+<<<<<<< HEAD
 |   4 | Radhika Gaikwad               |     015       | |
+=======
+|   4 | Radhika Gaikwad               |     015       | 
+>>>>>>> db18c92 (Update README and add test cases)
 
 Possible contribution areas include program implementation, pointer logic, testing, diagrams, documentation, and repository management. Record each member's actual contribution.
 
