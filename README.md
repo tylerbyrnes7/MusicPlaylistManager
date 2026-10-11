@@ -265,13 +265,7 @@ Add the actual team information below:
 |   1 | Anshuman Sarve                |     242       |
 |   2 | Tejas Patil                   |     229       |
 |   3 | Gayatri Darade                |     016       |
-<<<<<<< HEAD
-|   4 | Radhika Gaikwad               |     015       | |
-=======
 |   4 | Radhika Gaikwad               |     015       | 
->>>>>>> db18c92 (Update README and add test cases)
-
-Possible contribution areas include program implementation, pointer logic, testing, diagrams, documentation, and repository management. Record each member's actual contribution.
 
 ## 14. Conclusion
 
