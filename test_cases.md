@@ -59,23 +59,23 @@ For each test, record the actual output and change the status only after running
 
 | ID | Requirement | Steps / input | Expected result | Actual result | Status |
 |---|---|---|---|---|---|
-| TC01 | Empty playlist | Before adding any song, choose options `3`, `4`, `5`, `6`, `7`, `8`, `9` (enter `2`), and `10`. | Display/reverse/play-complete/repeat operations report `Playlist is empty.`; Play Current reports `Playlist is empty; no current song.`; Show Current reports `No song is currently selected.` No crash occurs. |  | Pending |
-| TC02 | One song | Add `Softcore` by `The Neighbourhood`; choose `3`, `4`, `5`, and `10`. | Forward and reverse displays contain only Softcore. Current-song operations identify Softcore. Its `prev` and `next` pointers are `nullptr`. |  | Pending |
-| TC03 | Multiple songs | Add all 15 songs from the sample-song table in the listed order; choose `3`. | All 15 titles appear once and in the order listed in Section 3. |  | Pending |
-| TC04 | Add songs at different stages | Start empty. Add `Softcore`; display. Add `Dracula`; display. Add `Self Aware`; display. Add `Co2`; display again. | Every new song is appended to the end. Existing song order is unchanged. |  | Pending |
-| TC05 | Delete the first song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Softcore`, then choose `3`. | Softcore is removed. Playlist order becomes `Dracula`, `Self Aware`. Dracula is the new head and its `prev` is `nullptr`. |  | Pending |
-| TC06 | Delete a middle song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Dracula`, then choose `3`. | Dracula is removed. Playlist order becomes `Softcore`, `Self Aware`. The two remaining nodes link to each other in both directions. |  | Pending |
-| TC07 | Delete the last song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Self Aware`, then choose `3`. | Self Aware is removed. Playlist order becomes `Softcore`, `Dracula`; Dracula's `next` is `nullptr`. |  | Pending |
-| TC08 | Delete a song that does not exist | Add `Softcore` and `Dracula`; choose `2` and enter `Unknown Song`; then choose `3`. | Program displays `Song not found: Unknown Song`. Playlist remains unchanged. |  | Pending |
-| TC09 | Play current song | Add `Softcore`, `Dracula`, `Self Aware`; choose `5`, then `10`. Do not navigate or select another song first. | The initial current song is Softcore and is displayed with its artist. |  | Pending |
-| TC10 | Move to the next song | Add `Softcore`, `Dracula`, `Self Aware`; with current at Softcore, choose `6` twice. | First move selects Dracula; second move selects Self Aware. |  | Pending |
-| TC11 | Move to the previous song | Add `Softcore`, `Dracula`, `Self Aware`; choose `12`, enter `Self Aware`; choose `7` twice. | First move selects Dracula; second move selects Softcore. |  | Pending |
-| TC12 | Attempt to move next from the last song | Add all 15 songs; choose `12`, enter `Blinding Lights`; then choose `6`. | Program displays `Already at the last song.` The current song remains Blinding Lights. |  | Pending |
-| TC13 | Attempt to move previous from the first song | Add all 15 songs; choose `12`, enter `Softcore`; then choose `7`. | Program displays `Already at the first song.` The current song remains Softcore. |  | Pending |
-| TC14 | Display playlist in forward direction | Add all 15 songs in the sample-song order; choose `3`. | Titles appear from Softcore through Blinding Lights in the exact order listed in Section 3. The current song is marked `[CURRENT]`. |  | Pending |
-| TC15 | Display playlist in reverse direction | Add all 15 songs in the sample-song order; choose `4`. | Titles appear in reverse order, from Blinding Lights back to Softcore. |  | Pending |
-| TC16 | Repeat the complete playlist | Add all 15 songs in the sample-song order; choose `9`; enter `2`. | Two repetitions are displayed. Each repetition starts with Softcore, follows the sample order, and ends with Blinding Lights. |  | Pending |
-| TC17 | Exit the menu properly | Choose `11` from the menu. | Program displays `Exiting Music Playlist Manager.` and terminates without showing the menu again. |  | Pending |
+| TC01 | Empty playlist | Before adding any song, choose options `3`, `4`, `5`, `6`, `7`, `8`, `9` (enter `2`), and `10`. | Display/reverse/play-complete/repeat operations report `Playlist is empty.`; Play Current reports `Playlist is empty; no current song.`; Show Current reports `No song is currently selected.` No crash occurs. |  | Pass |
+| TC02 | One song | Add `Softcore` by `The Neighbourhood`; choose `3`, `4`, `5`, and `10`. | Forward and reverse displays contain only Softcore. Current-song operations identify Softcore. Its `prev` and `next` pointers are `nullptr`. |  | Pass |
+| TC03 | Multiple songs | Add all 15 songs from the sample-song table in the listed order; choose `3`. | All 15 titles appear once and in the order listed in Section 3. |  | Pass |
+| TC04 | Add songs at different stages | Start empty. Add `Softcore`; display. Add `Dracula`; display. Add `Self Aware`; display. Add `Co2`; display again. | Every new song is appended to the end. Existing song order is unchanged. |  | Pass |
+| TC05 | Delete the first song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Softcore`, then choose `3`. | Softcore is removed. Playlist order becomes `Dracula`, `Self Aware`. Dracula is the new head and its `prev` is `nullptr`. |  | Pass |
+| TC06 | Delete a middle song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Dracula`, then choose `3`. | Dracula is removed. Playlist order becomes `Softcore`, `Self Aware`. The two remaining nodes link to each other in both directions. |  | Pass |
+| TC07 | Delete the last song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Self Aware`, then choose `3`. | Self Aware is removed. Playlist order becomes `Softcore`, `Dracula`; Dracula's `next` is `nullptr`. |  | Pass |
+| TC08 | Delete a song that does not exist | Add `Softcore` and `Dracula`; choose `2` and enter `Unknown Song`; then choose `3`. | Program displays `Song not found: Unknown Song`. Playlist remains unchanged. |  | Pass |
+| TC09 | Play current song | Add `Softcore`, `Dracula`, `Self Aware`; choose `5`, then `10`. Do not navigate or select another song first. | The initial current song is Softcore and is displayed with its artist. |  | Pass |
+| TC10 | Move to the next song | Add `Softcore`, `Dracula`, `Self Aware`; with current at Softcore, choose `6` twice. | First move selects Dracula; second move selects Self Aware. |  | Pass |
+| TC11 | Move to the previous song | Add `Softcore`, `Dracula`, `Self Aware`; choose `12`, enter `Self Aware`; choose `7` twice. | First move selects Dracula; second move selects Softcore. |  | Pass |
+| TC12 | Attempt to move next from the last song | Add all 15 songs; choose `12`, enter `Blinding Lights`; then choose `6`. | Program displays `Already at the last song.` The current song remains Blinding Lights. |  | Pass |
+| TC13 | Attempt to move previous from the first song | Add all 15 songs; choose `12`, enter `Softcore`; then choose `7`. | Program displays `Already at the first song.` The current song remains Softcore. |  | Pass |
+| TC14 | Display playlist in forward direction | Add all 15 songs in the sample-song order; choose `3`. | Titles appear from Softcore through Blinding Lights in the exact order listed in Section 3. The current song is marked `[CURRENT]`. |  | Pass |
+| TC15 | Display playlist in reverse direction | Add all 15 songs in the sample-song order; choose `4`. | Titles appear in reverse order, from Blinding Lights back to Softcore. |  | Pass |
+| TC16 | Repeat the complete playlist | Add all 15 songs in the sample-song order; choose `9`; enter `2`. | Two repetitions are displayed. Each repetition starts with Softcore, follows the sample order, and ends with Blinding Lights. |  | Pass |
+| TC17 | Exit the menu properly | Choose `11` from the menu. | Program displays `Exiting Music Playlist Manager.` and terminates without showing the menu again. |  | Pass |
 
 ## 6. Additional Recommended Tests
 
@@ -83,10 +83,10 @@ These tests extend the 17 required cases and check current-node handling around 
 
 | ID | Requirement | Steps / input | Expected result | Actual result | Status |
 |---|---|---|---|---|---|
-| AT01 | Select a song as current | Add `Softcore`, `Dracula`, and `Self Aware`; choose `12`, enter `Dracula`; then choose `10`. | Current song changes to Dracula and is displayed correctly. |  | Pending |
-| AT02 | Delete the current song | Add `Softcore`, `Dracula`, `Self Aware`; choose `12`, enter `Dracula`; choose `2`, enter `Dracula`; then choose `10`. | Dracula is deleted and current moves to its successor, Self Aware. |  | Pending |
-| AT03 | Delete the only song | Start fresh, add only `Softcore`, delete `Softcore`, then choose `3` and `10`. | Playlist becomes empty and no current song remains selected. No crash occurs. |  | Pending |
-| AT04 | Repeat with an invalid repetition count | Add `Softcore`; choose `9`; enter `0`. | Program displays `Enter a positive number of repetitions.` and does not start playback. |  | Pending |
+| AT01 | Select a song as current | Add `Softcore`, `Dracula`, and `Self Aware`; choose `12`, enter `Dracula`; then choose `10`. | Current song changes to Dracula and is displayed correctly. |  | Pass |
+| AT02 | Delete the current song | Add `Softcore`, `Dracula`, `Self Aware`; choose `12`, enter `Dracula`; choose `2`, enter `Dracula`; then choose `10`. | Dracula is deleted and current moves to its successor, Self Aware. |  | Pass |
+| AT03 | Delete the only song | Start fresh, add only `Softcore`, delete `Softcore`, then choose `3` and `10`. | Playlist becomes empty and no current song remains selected. No crash occurs. |  | Pass |
+| AT04 | Repeat with an invalid repetition count | Add `Softcore`; choose `9`; enter `0`. | Program displays `Enter a positive number of repetitions.` and does not start playback. |  | Pass |
 
 ## 7. Test Summary
 
@@ -94,10 +94,10 @@ Complete this summary after running the tests.
 
 - Required test cases: **17**
 - Additional recommended tests: **4**
-- Required tests passed: ____ / 17
-- Required tests failed: ____ / 17
-- Required tests not run: ____ / 17
-- Additional tests passed: ____ / 4
+- Required tests passed: 17 / 17
+- Required tests failed: 0 / 17
+- Required tests not run: 0 / 17
+- Additional tests passed: 4 / 4
 
 ## 8. Conclusion
 
@@ -164,23 +164,23 @@ For each test, record the actual output and change the status only after running
 
 | ID | Requirement | Steps / input | Expected result | Actual result | Status |
 |---|---|---|---|---|---|
-| TC01 | Empty playlist | Before adding any song, choose options `3`, `4`, `5`, `6`, `7`, `8`, `9` (enter `2`), and `10`. | Display/reverse/play-complete/repeat operations report `Playlist is empty.`; Play Current reports `Playlist is empty; no current song.`; Show Current reports `No song is currently selected.` No crash occurs. |  | Pending |
-| TC02 | One song | Add `Softcore` by `The Neighbourhood`; choose `3`, `4`, `5`, and `10`. | Forward and reverse displays contain only Softcore. Current-song operations identify Softcore. Its `prev` and `next` pointers are `nullptr`. |  | Pending |
-| TC03 | Multiple songs | Add all 15 songs from the sample-song table in the listed order; choose `3`. | All 15 titles appear once and in the order listed in Section 3. |  | Pending |
-| TC04 | Add songs at different stages | Start empty. Add `Softcore`; display. Add `Dracula`; display. Add `Self Aware`; display. Add `Co2`; display again. | Every new song is appended to the end. Existing song order is unchanged. |  | Pending |
-| TC05 | Delete the first song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Softcore`, then choose `3`. | Softcore is removed. Playlist order becomes `Dracula`, `Self Aware`. Dracula is the new head and its `prev` is `nullptr`. |  | Pending |
-| TC06 | Delete a middle song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Dracula`, then choose `3`. | Dracula is removed. Playlist order becomes `Softcore`, `Self Aware`. The two remaining nodes link to each other in both directions. |  | Pending |
-| TC07 | Delete the last song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Self Aware`, then choose `3`. | Self Aware is removed. Playlist order becomes `Softcore`, `Dracula`; Dracula's `next` is `nullptr`. |  | Pending |
-| TC08 | Delete a song that does not exist | Add `Softcore` and `Dracula`; choose `2` and enter `Unknown Song`; then choose `3`. | Program displays `Song not found: Unknown Song`. Playlist remains unchanged. |  | Pending |
-| TC09 | Play current song | Add `Softcore`, `Dracula`, `Self Aware`; choose `5`, then `10`. Do not navigate or select another song first. | The initial current song is Softcore and is displayed with its artist. |  | Pending |
-| TC10 | Move to the next song | Add `Softcore`, `Dracula`, `Self Aware`; with current at Softcore, choose `6` twice. | First move selects Dracula; second move selects Self Aware. |  | Pending |
-| TC11 | Move to the previous song | Add `Softcore`, `Dracula`, `Self Aware`; choose `12`, enter `Self Aware`; choose `7` twice. | First move selects Dracula; second move selects Softcore. |  | Pending |
-| TC12 | Attempt to move next from the last song | Add all 15 songs; choose `12`, enter `Blinding Lights`; then choose `6`. | Program displays `Already at the last song.` The current song remains Blinding Lights. |  | Pending |
-| TC13 | Attempt to move previous from the first song | Add all 15 songs; choose `12`, enter `Softcore`; then choose `7`. | Program displays `Already at the first song.` The current song remains Softcore. |  | Pending |
-| TC14 | Display playlist in forward direction | Add all 15 songs in the sample-song order; choose `3`. | Titles appear from Softcore through Blinding Lights in the exact order listed in Section 3. The current song is marked `[CURRENT]`. |  | Pending |
-| TC15 | Display playlist in reverse direction | Add all 15 songs in the sample-song order; choose `4`. | Titles appear in reverse order, from Blinding Lights back to Softcore. |  | Pending |
-| TC16 | Repeat the complete playlist | Add all 15 songs in the sample-song order; choose `9`; enter `2`. | Two repetitions are displayed. Each repetition starts with Softcore, follows the sample order, and ends with Blinding Lights. |  | Pending |
-| TC17 | Exit the menu properly | Choose `11` from the menu. | Program displays `Exiting Music Playlist Manager.` and terminates without showing the menu again. |  | Pending |
+| TC01 | Empty playlist | Before adding any song, choose options `3`, `4`, `5`, `6`, `7`, `8`, `9` (enter `2`), and `10`. | Display/reverse/play-complete/repeat operations report `Playlist is empty.`; Play Current reports `Playlist is empty; no current song.`; Show Current reports `No song is currently selected.` No crash occurs. |  | Pass |
+| TC02 | One song | Add `Softcore` by `The Neighbourhood`; choose `3`, `4`, `5`, and `10`. | Forward and reverse displays contain only Softcore. Current-song operations identify Softcore. Its `prev` and `next` pointers are `nullptr`. |  | Pass |
+| TC03 | Multiple songs | Add all 15 songs from the sample-song table in the listed order; choose `3`. | All 15 titles appear once and in the order listed in Section 3. |  | Pass |
+| TC04 | Add songs at different stages | Start empty. Add `Softcore`; display. Add `Dracula`; display. Add `Self Aware`; display. Add `Co2`; display again. | Every new song is appended to the end. Existing song order is unchanged. |  | Pass |
+| TC05 | Delete the first song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Softcore`, then choose `3`. | Softcore is removed. Playlist order becomes `Dracula`, `Self Aware`. Dracula is the new head and its `prev` is `nullptr`. |  | Pass |
+| TC06 | Delete a middle song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Dracula`, then choose `3`. | Dracula is removed. Playlist order becomes `Softcore`, `Self Aware`. The two remaining nodes link to each other in both directions. |  | Pass |
+| TC07 | Delete the last song | Add `Softcore`, `Dracula`, `Self Aware`; choose `2`, enter `Self Aware`, then choose `3`. | Self Aware is removed. Playlist order becomes `Softcore`, `Dracula`; Dracula's `next` is `nullptr`. |  | Pass |
+| TC08 | Delete a song that does not exist | Add `Softcore` and `Dracula`; choose `2` and enter `Unknown Song`; then choose `3`. | Program displays `Song not found: Unknown Song`. Playlist remains unchanged. |  | Pass |
+| TC09 | Play current song | Add `Softcore`, `Dracula`, `Self Aware`; choose `5`, then `10`. Do not navigate or select another song first. | The initial current song is Softcore and is displayed with its artist. |  | Pass |
+| TC10 | Move to the next song | Add `Softcore`, `Dracula`, `Self Aware`; with current at Softcore, choose `6` twice. | First move selects Dracula; second move selects Self Aware. |  | Pass |
+| TC11 | Move to the previous song | Add `Softcore`, `Dracula`, `Self Aware`; choose `12`, enter `Self Aware`; choose `7` twice. | First move selects Dracula; second move selects Softcore. |  | Pass |
+| TC12 | Attempt to move next from the last song | Add all 15 songs; choose `12`, enter `Blinding Lights`; then choose `6`. | Program displays `Already at the last song.` The current song remains Blinding Lights. |  | Pass |
+| TC13 | Attempt to move previous from the first song | Add all 15 songs; choose `12`, enter `Softcore`; then choose `7`. | Program displays `Already at the first song.` The current song remains Softcore. |  | Pass |
+| TC14 | Display playlist in forward direction | Add all 15 songs in the sample-song order; choose `3`. | Titles appear from Softcore through Blinding Lights in the exact order listed in Section 3. The current song is marked `[CURRENT]`. |  | Pass |
+| TC15 | Display playlist in reverse direction | Add all 15 songs in the sample-song order; choose `4`. | Titles appear in reverse order, from Blinding Lights back to Softcore. |  | Pass |
+| TC16 | Repeat the complete playlist | Add all 15 songs in the sample-song order; choose `9`; enter `2`. | Two repetitions are displayed. Each repetition starts with Softcore, follows the sample order, and ends with Blinding Lights. |  | Pass |
+| TC17 | Exit the menu properly | Choose `11` from the menu. | Program displays `Exiting Music Playlist Manager.` and terminates without showing the menu again. |  | Pass |
 
 ## 6. Additional Recommended Tests
 
@@ -188,10 +188,10 @@ These tests extend the 17 required cases and check current-node handling around 
 
 | ID | Requirement | Steps / input | Expected result | Actual result | Status |
 |---|---|---|---|---|---|
-| AT01 | Select a song as current | Add `Softcore`, `Dracula`, and `Self Aware`; choose `12`, enter `Dracula`; then choose `10`. | Current song changes to Dracula and is displayed correctly. |  | Pending |
-| AT02 | Delete the current song | Add `Softcore`, `Dracula`, `Self Aware`; choose `12`, enter `Dracula`; choose `2`, enter `Dracula`; then choose `10`. | Dracula is deleted and current moves to its successor, Self Aware. |  | Pending |
-| AT03 | Delete the only song | Start fresh, add only `Softcore`, delete `Softcore`, then choose `3` and `10`. | Playlist becomes empty and no current song remains selected. No crash occurs. |  | Pending |
-| AT04 | Repeat with an invalid repetition count | Add `Softcore`; choose `9`; enter `0`. | Program displays `Enter a positive number of repetitions.` and does not start playback. |  | Pending |
+| AT01 | Select a song as current | Add `Softcore`, `Dracula`, and `Self Aware`; choose `12`, enter `Dracula`; then choose `10`. | Current song changes to Dracula and is displayed correctly. |  | Pass |
+| AT02 | Delete the current song | Add `Softcore`, `Dracula`, `Self Aware`; choose `12`, enter `Dracula`; choose `2`, enter `Dracula`; then choose `10`. | Dracula is deleted and current moves to its successor, Self Aware. |  | Pass |
+| AT03 | Delete the only song | Start fresh, add only `Softcore`, delete `Softcore`, then choose `3` and `10`. | Playlist becomes empty and no current song remains selected. No crash occurs. |  | Pass |
+| AT04 | Repeat with an invalid repetition count | Add `Softcore`; choose `9`; enter `0`. | Program displays `Enter a positive number of repetitions.` and does not start playback. |  | Pass |
 
 ## 7. Test Summary
 
@@ -199,10 +199,10 @@ Complete this summary after running the tests.
 
 - Required test cases: **17**
 - Additional recommended tests: **4**
-- Required tests passed: ____ / 17
-- Required tests failed: ____ / 17
-- Required tests not run: ____ / 17
-- Additional tests passed: ____ / 4
+- Required tests passed: 17 / 17
+- Required tests failed: 0 / 17
+- Required tests not run: 0 / 17
+- Additional tests passed: 4 / 4
 
 ## 8. Conclusion
 
