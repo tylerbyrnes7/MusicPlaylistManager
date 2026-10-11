@@ -229,7 +229,7 @@ MusicPlaylistManager/
 │   ├── 05_previous_navigation.png
 │   ├── 06_reverse_traversal.png
 │   └── 07_special_cases.png
-└── screenshots/
+└── tests/
     ├── empty_playlist.png
     ├── forward_playlist.png
     ├── reverse_playlist.png
