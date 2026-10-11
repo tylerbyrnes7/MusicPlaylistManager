@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Music Playlist Manager — Test Cases
 
 ## 1. Project Information
