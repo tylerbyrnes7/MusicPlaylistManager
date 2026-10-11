@@ -103,7 +103,7 @@ Complete this summary after running the tests.
 
 These tests verify the Music Playlist Manager's doubly linked list operations: node creation, insertion, deletion, forward and reverse traversal, bidirectional navigation, and current-node management. The final test results should be based on actual program execution in Visual Studio Code. Any failed test should be investigated and the program retested before submission.
 
-=======
+
 # Music Playlist Manager — Test Cases
 
 ## 1. Project Information
@@ -208,4 +208,4 @@ Complete this summary after running the tests.
 
 These tests verify the Music Playlist Manager's doubly linked list operations: node creation, insertion, deletion, forward and reverse traversal, bidirectional navigation, and current-node management. The final test results should be based on actual program execution in Visual Studio Code. Any failed test should be investigated and the program retested before submission.
 
->>>>>>> db18c92 (Update README and add test cases)
+
