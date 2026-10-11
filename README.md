@@ -272,6 +272,3 @@ The Music Playlist Manager demonstrates the use of a doubly linked list to manag
 
 The project reinforces the relationship between node pointers and data structure operations. Testing boundary cases and maintaining clear documentation helps verify the implementation and prepare students to explain their work during demonstration and viva.
 
-## 15. Academic Integrity and Verification
-
-The source code, diagrams, and test records should represent the work actually completed by the group. All listed features and test results should be verified against the final version of `main.cpp`. Screenshots and diagrams should reflect the implementation submitted in the GitHub repository.
